@@ -46,7 +46,8 @@ public class SeleniumPractice
             String actualPageTitle = driver.getTitle();
             Assert.assertEquals(expectedDetailsPageTitle, actualPageTitle);
         }else
-        {System.out.println(companyName + " is not in the list");
+        {
+        	System.out.println(companyName + " is not in the list");
         }
     }
 
