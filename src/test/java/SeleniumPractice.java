@@ -42,6 +42,7 @@ public class SeleniumPractice
             // Print Current Price
             System.out.println(companyName + " Current Price: " + currentPrice);
             driver.findElement(By.partialLinkText(companyName)).click();
+
             String actualPageTitle = driver.getTitle();
             Assert.assertEquals(expectedDetailsPageTitle, actualPageTitle);
         }else
