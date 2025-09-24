@@ -13,7 +13,7 @@ public class StripeApiTest
 
     // Replace with your actual API key and token
     private final String API_KEY = "your_api_key";
-    private final String USER_NAME = "sk_test_tR3PYbcVNZZ796tH88S4VQ2u";
+    private final String USER_NAME = "";
     private final String BASE_URL = "https://api.stripe.com/v1";
 
     @Test
