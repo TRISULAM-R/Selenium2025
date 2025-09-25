@@ -1,5 +1,6 @@
 package restAssuredPrograms;
 
+import Utils.PropertyReader;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -9,6 +10,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Properties;
 import java.util.Random;
 
 import static org.hamcrest.Matchers.anyOf;
@@ -16,8 +18,9 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class GitHubApiTest
 {
+    PropertyReader propertyReader = new PropertyReader();
     private final String BASE_URL = "https://api.github.com";
-    private final String API_KEY = "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";
+    private final String API_KEY = propertyReader.get("apiKey");
     private final String OWNER_NAME = "/TRISULAM-R/";
     private final String OWNER_NAME1 = "TRISULAM-R";
     private final String CREATE_REPO = "/user/repos";
