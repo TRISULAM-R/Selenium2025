@@ -12,9 +12,6 @@ public class FindMissingNumberInArray
 
         int[] arr = {1,2,3,5,6};
 
-
-
-
     }
 
     public static void FindMissingNumberInArray(int[] arr)
