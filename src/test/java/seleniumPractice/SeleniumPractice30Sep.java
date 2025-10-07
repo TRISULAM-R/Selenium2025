@@ -57,7 +57,9 @@ public class SeleniumPractice30Sep
     {
         String expectedStyle = "opacity: 0.5";
         seleniumTrickySimulationPage.open(url);
+        Thread.sleep(5000);
         seleniumTrickySimulationPage.clickAddItemBtn();
+        Thread.sleep(5000);
         String style = seleniumTrickySimulationPage.clickOnCompleteItemButton();
         System.out.println(style);
         Assert.assertTrue(style.contains(expectedStyle));
