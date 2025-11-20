@@ -2,10 +2,7 @@ package seleniumPractice;
 
 import Utils.ExcelFileUtility;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,6 +15,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.*;
+import java.util.NoSuchElementException;
 
 public class AutomationPractice
 {
@@ -141,10 +139,25 @@ public class AutomationPractice
     @Test(description = "Open app and click on checkbox")
     public void hdfcBank() throws InterruptedException
     {
-        driver.get("https://www.hdfcbank.com/");
+        String month = "December";
+        String date = "6";
+        driver.get("https://paytm.com/");
+        driver.findElement(By.id("departureDate")).click();
+        try
+        {
+            driver.findElement(By.xpath("//td[contains(text(),'" + month + "')]/ancestor::table/descendant::div[text()='" + date + "']/parent::div[contains(@class,'calendar__day') and not(contains(@class,'calendar__dayFromOtherMonth')) and not(contains(@class,'calendar__disabledDay'))]")).click();
+
+        } catch (ElementNotInteractableException e)
+        {
+            driver.findElement(By.xpath("//i[@class=\"fCLnC _1MMxa\"]")).click();
+        }
+        catch (NoSuchElementException e)
+        {
+            System.out.println("Date cannot be selected : " +month +" "+ date);
+        }
 
         Thread.sleep(4000);
-
+        ////td[contains(text(),'Novem')]/ancestor::table/descendant::div[text()='6']/parent::div[contains(@class,'calendar__day') and not(contains(@class,'calendar__dayFromOtherMonth')) and not(contains(@class,'calendar__disabledDay'))]
     }
 
     @AfterClass
