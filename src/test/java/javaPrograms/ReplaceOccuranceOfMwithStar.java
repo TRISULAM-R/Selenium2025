@@ -6,26 +6,31 @@ public class ReplaceOccuranceOfMwithStar
     {
         String str = "aMbcdM1g2M";
         //output: a*bcd**1g2***
-        System.out.println(replaceMWithStar(str));
-    }
-    public static String replaceMWithStar(String str) {
+        System.out.println(replaceCharacterWithValue(str, 'M', "*"));
 
-        int count=0;
+        String str2 = "tomorrow";
+        //output: t$m$$rr$$$w
+        System.out.println(replaceCharacterWithValue(str2, 'o', "$"));
+    }
+
+    public static String replaceCharacterWithValue(String str, char value, String replaceWith)
+    {
+        int count = 0;
         StringBuilder builder = new StringBuilder();
-        for(int i=0;i<str.length();i++)
+        for (int i = 0; i < str.length(); i++)
         {
-            if(str.charAt(i) == 'M')
+            if (str.charAt(i) == value)
             {
                 count++;
-                for(int j=0; j<count; j++)
+                for (int j = 0; j < count; j++)
                 {
-                    builder.append("*");
+                    builder.append(replaceWith);
                 }
-            } else {
+            } else
+            {
                 builder.append(str.charAt(i));
             }
         }
         return builder.toString();
     }
-
 }
