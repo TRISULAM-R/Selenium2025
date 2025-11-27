@@ -1,0 +1,26 @@
+1. What is end-to-end testing?
+2. Explain the Agile process.
+3. What are the different teams involved in developing a software product?
+4. Difference between a Product Manager and a Product Owner.
+5. Why is Jenkins used in automation testing?
+6. Program: There are 1 lakh invoices for a big company belonging to 10 different organizations (each having 10k). From these 10k invoices:
+
+   * If the amount is 0–1000, store it in folder A
+   * If the amount is 1000–10000, store it in folder B
+   * If it is more than 10000, store it in folder C
+     (No need to create folders — just print the output in the console.)
+7. Which one is the optimized way — whether to use a switch statement or an if-else condition?
+8. How would you resolve conflicts?
+9. Isn't it a tedious job manually resolving the conflicts everyday? Is there any other solution for this?
+10. What are the tools used in automation testing?
+11. What is an Epic?
+12. What is a Feature?
+13. Difference between an Epic and a Feature.
+14. Can we write test cases in Jira (without Zephyr)?
+15. What is a User Story?
+16. If a customer is new to the business and comes with unclear requirements, what will you create in Jira — an Epic or a Feature?
+17. You are a lead and there are 10 members. There are 500 test cases → 10 features → 1 Epic. What would be your Git branching strategy for automating the test cases?
+18. What is a master branch?
+19. Difference between remote and local repositories.
+20. RPA challenge.
+21. Logic to fetch the data from an Excel/WebTable for a specific name (Example: “Akash”), where the row number is unknown.
